@@ -11,8 +11,17 @@ $(document).ready(function(){
 	});
 
 
-
-
+	const sections = ['About','Tutoring','Contact'];
+	sections.forEach(function(section) {
+		const sectionHeader = `${section}-header`;
+		$(sectionHeader).click(function(event) {
+			event.preventDefault();
+    		$('html, body').animate({
+    	    	scrollTop: $(`#${section}`).offset().top
+    		}, 2000);
+		});		
+	});
+	
 	$("#clients-logo").owlCarousel({
 		autoPlay: 3000,
 		items : 5,
