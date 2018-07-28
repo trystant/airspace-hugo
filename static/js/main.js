@@ -11,9 +11,9 @@ $(document).ready(function(){
 	});
 
 
-	const sections = ['About','Tutoring','Contact'];
+	const sections = ['About', 'Tutoring', 'Contact'];
 	sections.forEach(function(section) {
-		const sectionHeader = `${section}-header`;
+		const sectionHeader = `#${section}-header`;
 		$(sectionHeader).click(function(event) {
 			event.preventDefault();
     		$('html, body').animate({
